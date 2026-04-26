@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お客様の声 | JoaGOLFStudio</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        /* VOICEページ専用スタイル */
+        .voice-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .voice-card {
+            display: flex;
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .voice-user {
+            flex-shrink: 0;
+            text-align: center;
+            width: 120px;
+        }
+
+        .user-img {
+            width: 80px;
+            height: 80px;
+            background: #eee;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .user-info {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .voice-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .voice-text {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .voice-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .voice-content h3 {
+                border-left: none;
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="kv" style="height: 300px;">
+            <div class="kv-inner fade-in">
+                <h2 class="kv-copy">VOICE</h2>
+                <p>お客様の声</p>
+            </div>
+        </section>
+
+        <section class="section-padding container fade-in">
+            <div class="section-header">
+                <h2>USER REVIEWS</h2>
+                <p>実際に通われている方の声</p>
+            </div>
+
+            <div class="voice-grid">
+                <article class="voice-card">
+                    <div class="voice-user">
+                        <div class="user-img">👨‍💼</div>
+                        <p class="user-info"><strong>30代 男性 / 会社員</strong><br>赤坂店利用</p>
+                    </div>
+                    <div class="voice-content">
+                        <h3>仕事の合間に効率よく上達！</h3>
+                        <p class="voice-text">
+                            「接待ゴルフに向けて通い始めました。最新のシミュレーターで自分のスイングが数値化されるので、納得感を持って修正に取り組めます。手ぶらで寄れるので、忙しい時期でも続けられているのが嬉しいですね。」
+                        </p>
+                    </div>
+                </article>
+
+                <article class="voice-card">
+                    <div class="voice-user">
+                        <div class="user-img">👩</div>
+                        <p class="user-info"><strong>20代 女性 / 初心者</strong><br>千駄ヶ谷店利用</p>
+                    </div>
+                    <div class="voice-content">
+                        <h3>運動が苦手でも楽しめました</h3>
+                        <p class="voice-text">
+                            「全くの初心者で不安でしたが、インストラクターの方が優しく基礎から教えてくれました。スタジオがとても綺麗で、女性一人でも通いやすい雰囲気です。今ではコースデビューが目標です！」
+                        </p>
+                    </div>
+                </article>
+
+                <article class="voice-card">
+                    <div class="voice-user">
+                        <div class="user-img">👴</div>
+                        <p class="user-info"><strong>60代 男性 / 経験者</strong><br>箕面店利用</p>
+                    </div>
+                    <div class="voice-content">
+                        <h3>スイングの迷いが消えました</h3>
+                        <p class="voice-text">
+                            「長年の癖が抜けず悩んでいましたが、動画分析で自分の姿を客観的に見ることで劇的に改善しました。無理な力を使わないスイングを教わり、飛距離が戻ってきたのが驚きです。」
+                        </p>
+                    </div>
+                </article>
+
+                <article class="voice-card">
+                    <div class="voice-user">
+                        <div class="user-img">🏌️‍♀️</div>
+                        <p class="user-info"><strong>40代 女性 / 中級者</strong><br>神戸店利用</p>
+                    </div>
+                    <div class="voice-content">
+                        <h3>スコア100切りの壁を突破！</h3>
+                        <p class="voice-text">
+                            「ずっと停滞していたスコアが、通い始めて3ヶ月でベスト更新できました。個別のレベルに合わせた的確なアドバイスのおかげです。お洒落な空間なので、モチベーションも上がります。」
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-padding bg-light text-center fade-in">
+            <div class="container">
+                <h2 style="margin-bottom: 30px;">あなたもJoaGOLFStudioで<br>新しいゴルフ体験を始めませんか？</h2>
+                <a href="../store/index.html" class="btn">お近くの店舗を探す</a>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

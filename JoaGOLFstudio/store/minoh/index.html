@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箕面店 | JoaGOLFStudio</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <style>
+        /* 個別ページ専用補足スタイル */
+        .instructor-profile {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .instructor-img {
+            width: 200px;
+            height: 200px;
+            background: #ddd;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        .price-table th,
+        .price-table td {
+            border: 1px solid #eee;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .price-table th {
+            background: var(--light-gray);
+            width: 30%;
+        }
+
+        /* 追従予約バー */
+        .floating-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 0;
+            border-top: 2px solid var(--primary-color);
+            z-index: 1100;
+            text-align: center;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .instructor-profile {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .access-content {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main style="padding-bottom: 100px;">
+
+        <section class="kv" style="height: 400px;">
+            <div class="kv-inner fade-in">
+                <h2 class="kv-copy">MINOH</h2>
+                <p>箕面店</p>
+            </div>
+        </section>
+
+        <section class="section-padding container fade-in">
+            <div class="section-header">
+                <h2>STUDIO FEATURES</h2>
+                <p>箕面店の特徴</p>
+            </div>
+            <div class="text-center">
+                <p>北摂エリアの閑静な住宅街に位置する箕面店。ゆったりとした打席スペースを確保し、ご家族やご友人とも通いやすいアットホームな雰囲気が特徴です。最新シミュレーターによる分析と、個々のレベルに合わせた丁寧なレッスンで、着実な上達をサポートします。
+                </p>
+            </div>
+        </section>
+
+        <section class="section-padding bg-light fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>INSTRUCTOR</h2>
+                    <p>インストラクター</p>
+                </div>
+                <div class="instructor-profile">
+                    <div class="instructor-img"></div>
+                    <div class="instructor-info">
+                        <h3>中村 祥太 (Shota Nakamura)</h3>
+                        <p>ジュニアからシニアまで、1,000人以上の指導実績を持つベテランインストラクター。「ゴルフを一生の趣味に」をモットーに、体への負担が少ないスイング理論を分かりやすく解説します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding container fade-in">
+            <div class="section-header">
+                <h2>PRICE</h2>
+                <p>箕面店 料金プラン</p>
+            </div>
+            <table class="price-table">
+                <tr>
+                    <th>入会金</th>
+                    <td>22,000円</td>
+                </tr>
+                <tr>
+                    <th>スタンダードプラン</th>
+                    <td>17,600円 / 月</td>
+                </tr>
+                <tr>
+                    <th>ファミリー会員（2名〜）</th>
+                    <td>15,400円 / 1名あたり</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="section-padding bg-light fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>ACCESS</h2>
+                    <p>店舗アクセス</p>
+                </div>
+                <div class="access-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                    <div>
+                        <p><strong>JoaGOLFStudio 箕面店</strong></p>
+                        <p>〒562-0001 大阪府箕面市箕面1-1-1</p>
+                        <p style="margin-top: 10px;">箕面駅から徒歩5分 / 駐車場完備</p>
+                        <p>営業時間: 10:00 - 21:00</p>
+                        <p>定休日: 火曜日</p>
+                    </div>
+                    <div class="map-dummy"
+                        style="background: #ddd; height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                        Google Map (箕面店周辺)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding container fade-in text-center">
+            <div class="section-header">
+                <h2>INSTAGRAM</h2>
+            </div>
+            <p>箕面店の和気あいあいとしたレッスンの様子を公開中！</p>
+            <a href="#" style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">@joagolf_minoh</a>
+        </section>
+
+    </main>
+
+    <div class="floating-banner">
+        <div class="container">
+            <a href="https://joagolfstudio.hacomono.jp/home?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleARH-hFleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaeYjPcCtizLlByXasdiWLfrQ7iZ4_PPwJDCSIu4OtT9KZEPxUt0b6oZNFX0Lw_aem_pZOPodqXBW2V4LcxJc8-0w" class="btn" target="_blank"
+                rel="noopener noreferrer">箕面店で無料体験を予約する</a>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../assets/js/main.js"></script>
+</body>
+
+</html>

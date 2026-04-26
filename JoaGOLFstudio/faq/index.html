@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | JoaGOLFStudio</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        /* FAQページ専用スタイル */
+        .faq-category {
+            margin-bottom: 80px;
+        }
+
+        .faq-category h3 {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 12px;
+            margin-bottom: 40px;
+            letter-spacing: 0.05em;
+        }
+
+        .faq-item {
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            transition: background 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background: #fafafa;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 30px 0;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            text-align: left;
+            /* テキストを左寄せ */
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: none;
+            background: none;
+            outline: none;
+        }
+
+        /* Qアイコンとテキストを左側に、開閉アイコンを右端に */
+        .q-wrapper {
+            display: flex;
+            align-items: flex-start;
+            flex-grow: 1;
+            padding-right: 20px;
+        }
+
+        .q-prefix {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            width: 40px;
+            /* Qの文字幅を固定 */
+            flex-shrink: 0;
+            line-height: 1.2;
+        }
+
+        .q-text {
+            line-height: 1.5;
+            padding-top: 2px;
+        }
+
+        /* 開閉アイコン（右端固定） */
+        .faq-icon {
+            position: relative;
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            margin-left: auto;
+            /* これで右端に寄る */
+        }
+
+        .faq-icon::before,
+        .faq-icon::after {
+            content: "";
+            position: absolute;
+            background: #ccc;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease;
+        }
+
+        .faq-icon::before {
+            width: 100%;
+            height: 2px;
+        }
+
+        .faq-icon::after {
+            width: 2px;
+            height: 100%;
+        }
+
+        /* アクティブ時の変化 */
+        .faq-item.is-active .faq-icon::after {
+            transform: translate(-50%, -50%) rotate(90deg);
+            opacity: 0;
+        }
+
+        .faq-item.is-active .faq-icon::before {
+            background: var(--primary-color);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+        }
+
+        .faq-item.is-active .faq-answer {
+            max-height: 1000px;
+            opacity: 1;
+        }
+
+        .faq-answer-inner {
+            display: flex;
+            align-items: flex-start;
+            padding: 0 40px 40px 0;
+            /* 右端に開閉アイコン分の余白 */
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .a-prefix {
+            color: #333;
+            font-weight: 900;
+            width: 40px;
+            /* Qと同じ幅に揃える */
+            flex-shrink: 0;
+            font-size: 1.1rem;
+        }
+
+        .a-text {
+            flex-grow: 1;
+        }
+
+        @media (max-width: 768px) {
+            .faq-question {
+                font-size: 1rem;
+            }
+
+            .q-prefix,
+            .a-prefix {
+                width: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="kv" style="height: 300px;">
+            <div class="kv-inner fade-in">
+                <h2 class="kv-copy" style="font-size: 3.5rem; letter-spacing: 0.1em;">FAQ</h2>
+                <p>よくあるご質問</p>
+            </div>
+        </section>
+
+        <section class="section-padding container">
+            <div class="faq-category fade-in">
+                <h3>入会・施設利用</h3>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="q-wrapper">
+                                <span class="q-prefix">Q.</span>
+                                <span class="q-text">初心者でも大丈夫ですか？</span>
+                            </span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <span class="a-prefix">A.</span>
+                                <span class="a-text">はい、もちろんです。会員様の約半数が未経験からのスタートです。プロが基礎から丁寧にお教えしますので、ご安心ください。</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="q-wrapper">
+                                <span class="q-prefix">Q.</span>
+                                <span class="q-text">手ぶらで行ってもいいですか？</span>
+                            </span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <span class="a-prefix">A.</span>
+                                <span class="a-text">はい。最新のレンタルクラブ、シューズ、グローブを無料で完備しております。お仕事帰りや隙間時間に気軽にお越しください。</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category fade-in">
+                <h3>レッスン・予約</h3>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="q-wrapper">
+                                <span class="q-prefix">Q.</span>
+                                <span class="q-text">予約はどのように取ればいいですか？</span>
+                            </span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <span class="a-prefix">A.</span>
+                                <span
+                                    class="a-text">会員様専用のオンライン予約システムから24時間いつでも予約・変更が可能です。各店舗の紹介ページにある「予約する」ボタンからもアクセスいただけます。</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="q-wrapper">
+                                <span class="q-prefix">Q.</span>
+                                <span class="q-text">左利き用の打席はありますか？</span>
+                            </span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <span class="a-prefix">A.</span>
+                                <span class="a-text">各店舗にレフティ優先打席をご用意しております。予約時にレフティ打席を選択していただくことが可能です。</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // FAQ用のアコーディオン動作
+        document.addEventListener('click', (e) => {
+            const question = e.target.closest('.faq-question');
+            if (!question) return;
+
+            const item = question.parentElement;
+
+            // 他の項目を閉じたい場合はここを有効化（オプション）
+            /*
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) otherItem.classList.remove('is-active');
+            });
+            */
+
+            item.classList.toggle('is-active');
+        });
+    </script>
+</body>
+
+</html>

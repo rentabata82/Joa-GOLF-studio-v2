@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT | JoaGOLFStudio</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        /* お問い合わせページ専用スタイル */
+        .contact-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .form-label span {
+            background: var(--primary-color);
+            color: var(--white);
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(204, 33, 127, 0.1);
+        }
+
+        .form-check {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .privacy-policy {
+            background: var(--light-gray);
+            padding: 20px;
+            height: 150px;
+            overflow-y: scroll;
+            font-size: 0.85rem;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .submit-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="kv" style="height: 300px;">
+            <div class="kv-inner fade-in">
+                <h2 class="kv-copy" style="font-size: 3rem;">CONTACT</h2>
+                <p>無料体験・お問い合わせ</p>
+            </div>
+        </section>
+
+        <section class="section-padding container">
+            <div class="section-header">
+                <h2>INQUIRY FORM</h2>
+                <p>下記フォームよりお気軽にお問い合わせください</p>
+            </div>
+
+            <div class="contact-form fade-in">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label class="form-label">お問い合わせ項目<span>必須</span></label>
+                        <select class="form-control" required>
+                            <option value="">選択してください</option>
+                            <option value="trial">無料体験レッスンの予約</option>
+                            <option value="visit">店舗見学の予約</option>
+                            <option value="question">サービスに関する質問</option>
+                            <option value="recruit">採用について（エントリー）</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">希望店舗<span>必須</span></label>
+                        <div class="form-check">
+                            <label><input type="radio" name="store" value="kobe" required> 神戸店</label>
+                            <label><input type="radio" name="store" value="minoh"> 箕面店</label>
+                            <label><input type="radio" name="store" value="akasaka"> 赤坂店</label>
+                            <label><input type="radio" name="store" value="kojimachi"> 麹町店</label>
+                            <label><input type="radio" name="store" value="shinjuku"> 西新宿店</label>
+                            <label><input type="radio" name="store" value="sendagaya"> 千駄ヶ谷店</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">お名前<span>必須</span></label>
+                        <input type="text" class="form-control" placeholder="山田 太郎" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">メールアドレス<span>必須</span></label>
+                        <input type="email" class="form-control" placeholder="example@mail.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">電話番号</label>
+                        <input type="tel" class="form-control" placeholder="090-0000-0000">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">お問い合わせ内容</label>
+                        <textarea class="form-control" rows="5" placeholder="ご自由にご記入ください"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">プライバシーポリシー<span>必須</span></label>
+                        <div class="privacy-policy">
+                            <p>当スタジオは、お客様の個人情報を適切に管理し、本来の目的以外に使用することはありません。送信いただいた情報は、お問い合わせへの回答および予約管理のためにのみ利用いたします...（以下略）
+                            </p>
+                        </div>
+                        <label style="display: block; text-align: center; cursor: pointer;">
+                            <input type="checkbox" required> プライバシーポリシーに同意する
+                        </label>
+                    </div>
+
+                    <div class="submit-container">
+                        <button type="submit" class="btn" style="width: 100%; max-width: 300px;">送信する</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

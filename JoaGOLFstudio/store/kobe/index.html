@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>神戸店 | JoaGOLFStudio</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <style>
+        /* 個別ページ専用補足スタイル */
+        .instructor-profile {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .instructor-img {
+            width: 200px;
+            height: 200px;
+            background: #ddd;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        .price-table th,
+        .price-table td {
+            border: 1px solid #eee;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .price-table th {
+            background: var(--light-gray);
+            width: 30%;
+        }
+
+        /* 追従予約バー */
+        .floating-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 0;
+            border-top: 2px solid var(--primary-color);
+            z-index: 1100;
+            text-align: center;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .instructor-profile {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .access-content {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main style="padding-bottom: 100px;">
+
+        <section class="kv" style="height: 400px;">
+            <div class="kv-inner fade-in">
+                <h2 class="kv-copy">KOBE</h2>
+                <p>神戸店</p>
+            </div>
+        </section>
+
+        <section class="section-padding container fade-in">
+            <div class="section-header">
+                <h2>STUDIO FEATURES</h2>
+                <p>神戸店の特徴</p>
+            </div>
+            <div class="text-center">
+                <p>三宮駅から徒歩圏内の好立地。神戸店では、スイング軌道だけでなく、足元の重心移動を可視化する最新の弾道測定器を完備。初心者から上級者まで、港街の開放的な気分でレッスンをお楽しみいただけます。</p>
+            </div>
+        </section>
+
+        <section class="section-padding bg-light fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>INSTRUCTOR</h2>
+                    <p>インストラクター</p>
+                </div>
+                <div class="instructor-profile">
+                    <div class="instructor-img"></div>
+                    <div class="instructor-info">
+                        <h3>田中 勇次 (Yuji Tanaka)</h3>
+                        <p>関西のプロトーナメント帯同経験を持つ実力派。解剖学に基づいた無理のないスイング作りを提案し、シニアや女性のお客様からも高い支持を得ています。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding container fade-in">
+            <div class="section-header">
+                <h2>PRICE</h2>
+                <p>神戸店 料金プラン</p>
+            </div>
+            <table class="price-table">
+                <tr>
+                    <th>入会金</th>
+                    <td>22,000円</td>
+                </tr>
+                <tr>
+                    <th>レギュラー会員</th>
+                    <td>19,800円 / 月</td>
+                </tr>
+                <tr>
+                    <th>平日デイタイムプラン</th>
+                    <td>13,200円 / 月</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="section-padding bg-light fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>ACCESS</h2>
+                    <p>店舗アクセス</p>
+                </div>
+                <div class="access-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                    <div>
+                        <p><strong>JoaGOLF STUDIO KOBE（神戸店）</strong></p>
+                        <p>〒650-0014<br>兵庫県神戸市中央区元町高架通3-298<br>VIVO Smart Range 神戸店内</p>
+                        <p style="margin-top: 10px;">JR・阪神「元町駅」西口より徒歩1分（高架下）</p>
+                        <p style="margin-top: 10px;">
+                            <strong>営業時間:</strong><br>
+                            火〜木：15:00 - 20:30<br>
+                            金曜日：15:00 - 21:30<br>
+                            土・日：10:00 - 18:00
+                        </p>
+                        <p><strong>定休日:</strong> 月曜日・祝日</p>
+                    </div>
+                    <div class="map-container"
+                        style="height: 350px; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6561.743810436204!2d135.1762783198701!3d34.683182258437796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008f43dd5a12f9%3A0x46549ef2b6181be7!2sJoaGOLF%20STUDIO%20KOBE!5e0!3m2!1sja!2sjp!4v1777183068781!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section-padding container fade-in text-center">
+            <div class="section-header">
+                <h2>INSTAGRAM</h2>
+            </div>
+            <p style="margin-bottom: 20px;">最新のイベント情報やプロのアドバイスを更新中！</p>
+        
+            <a href="https://www.instagram.com/joagolfstudio_kansai/" target="_blank" rel="noopener noreferrer" class="instagram-link">
+                <span class="insta-icon">
+                    <i></i>
+                </span>
+                @joagolfstudio_kansai
+            </a>
+        </section>
+
+    </main>
+
+    <div class="floating-banner">
+        <div class="container">
+            <a href="https://vivosmartrange-kobe.trial.smarthello.jp/8171fa84a1354d9d832042e30c114c25/simulation" class="btn" target="_blank"
+                rel="noopener noreferrer">神戸店で無料体験を予約する</a>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../assets/js/main.js"></script>
+</body>
+
+</html>
