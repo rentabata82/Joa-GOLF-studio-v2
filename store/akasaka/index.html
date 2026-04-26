@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赤坂店 | JoaGOLFStudio</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <style>
+        /* 個別ページ専用補足スタイル */
+        .instructor-profile {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .instructor-img {
+            width: 200px;
+            height: 200px;
+            background: #ddd;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        .price-table th,
+        .price-table td {
+            border: 1px solid #eee;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .price-table th {
+            background: var(--light-gray);
+            width: 30%;
+        }
+
+        /* 追従予約バー */
+        .floating-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 0;
+            border-top: 2px solid var(--primary-color);
+            z-index: 1100;
+            text-align: center;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .instructor-profile {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .access-content {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main style="padding-bottom: 100px;">
+
+        <section class="kv" style="height: 400px;">
+            <div class="kv-inner fade-in">
+                <h2 class="kv-copy">AKASAKA</h2>
+                <p>赤坂店</p>
+            </div>
+        </section>
+
+        <section class="section-padding container fade-in">
+            <div class="section-header">
+                <h2>STUDIO FEATURES</h2>
+                <p>赤坂店の特徴</p>
+            </div>
+            <div class="text-center">
+                <p>ビジネス街の中心に位置する赤坂店。最新の超高速カメラを導入し、インパクトの瞬間まで徹底的に分析可能です。仕事の合間や接待前の調整にも最適なプレミアムな空間を提供します。</p>
+            </div>
+        </section>
+
+        <section class="section-padding bg-light fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>INSTRUCTOR</h2>
+                    <p>インストラクター</p>
+                </div>
+                <div class="instructor-profile">
+                    <div class="instructor-img"></div>
+                    <div class="instructor-info">
+                        <h3>佐藤 健一 (Kenichi Sato)</h3>
+                        <p>ツアープロコーチ経験を活かし、効率的なスイング形成をサポート。特にビジネスマン向けの短期間スコアアッププログラムに定評があります。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding container fade-in">
+            <div class="section-header">
+                <h2>PRICE</h2>
+                <p>赤坂店 料金プラン</p>
+            </div>
+            <table class="price-table">
+                <tr>
+                    <th>入会金</th>
+                    <td>22,000円</td>
+                </tr>
+                <tr>
+                    <th>都心限定プレミアムプラン</th>
+                    <td>27,500円 / 月</td>
+                </tr>
+                <tr>
+                    <th>法人会員プラン</th>
+                    <td>お問い合わせください</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="section-padding bg-light fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>ACCESS</h2>
+                    <p>店舗アクセス</p>
+                </div>
+                <div class="access-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                    <div>
+                        <p><strong>JoaGOLFStudio 赤坂店</strong></p>
+                        <p>〒107-0052 東京都港区赤坂3-21-15</p>
+                        <p style="margin-top: 10px;">赤坂見附駅から徒歩3分</p>
+                        <p>営業時間: 07:00 - 23:00</p>
+                        <p>定休日: 年中無休</p>
+                    </div>
+                    <div class="map-dummy"
+                        style="background: #ddd; height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                        Google Map (赤坂店周辺)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding container fade-in text-center">
+            <div class="section-header">
+                <h2>INSTAGRAM</h2>
+            </div>
+            <p>赤坂店限定のイベント情報やプロのアドバイスを更新中！</p>
+            <a href="#" style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">@joagolf_akasaka</a>
+        </section>
+
+    </main>
+
+    <div class="floating-banner">
+        <div class="container">
+            <a href="https://form.hyperion-golf.com/reserve/schedule/1/5?trial=true" class="btn" target="_blank"
+                rel="noopener noreferrer">赤坂店で無料体験を予約する</a>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../assets/js/main.js"></script>
+</body>
+
+</html>
